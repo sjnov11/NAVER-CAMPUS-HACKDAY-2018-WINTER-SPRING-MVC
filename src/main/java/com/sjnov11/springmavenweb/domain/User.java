@@ -1,7 +1,17 @@
-package com.sjnov11.springmavenweb.web;
+package com.sjnov11.springmavenweb.domain;
 
+import javax.persistence.*;
+
+
+@Entity
 public class User {
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @Column(nullable = false, length = 20)
     private String userId;
+
     private String userPassword;
     private String userName;
     private String userEmail;
